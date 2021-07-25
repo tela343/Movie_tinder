@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #dddddd;
+    overflow: hidden;
+}
+
+.button {
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 9vh;
+    height: 9vh;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 25px 1px black
+}
+
+.details {
+    border-radius: 10px;
+    margin-top: 0;
+    padding: 0;
+}
+
+img {
+    width: 3vh;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.secondWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -62%);
+}
+
+.thirdWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+}
+
+.placehold {
+    margin: 0px 10px 0px 10px;
+    height: 9vh;
+    background-color: red;
+}
+
+.burger {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 5;
+}
+
+.burger button {
+    outline: none;
+}
+
+.menu{
+    position: absolute;
+    height: 100%;
+    width: 20vw;
+    background-color: white;
+    transform: translateX(100vw);
+    z-index: 0;
+    overflow-y: scroll;
+}
+
+@keyframes menuIn {
+    0% {transform: translateX(100vw);}
+    50% {transform: translateX(90vw);}
+    80% {transform: translateX(85vw);}
+    100% {transform: translateX(80vw);}
+}
+
+.animate {
+    transition: transform .35s ease-in-out;
+}
+
+.animate.in {
+    transform: translateX(80vw);
+  }
+
+.animate.out {
+    transform: translateX(100vw);
+}
+
+.flexContainer {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    .menu {
+        width: 20vw;
+    }
+    .animate.in {
+        transform: translateX(80vw);
+      }
+    
+    .animate.out {
+        transform: translateX(100vw);
+    }
+}
+
+@media (orientation: portrait) {
+    .menu {
+        width: 80vw;
+    }
+
+    .animate.in {
+        transform: translateX(20vw);
+      }
+    
+    .animate.out {
+        transform: translateX(100vw);
+    }
+}
